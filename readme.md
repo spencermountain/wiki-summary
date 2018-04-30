@@ -1,3 +1,24 @@
+<div align="center">
+  <img src="https://cloud.githubusercontent.com/assets/399657/23590290/ede73772-01aa-11e7-8915-181ef21027bc.png" />
+  <div>quick summaries of wikipedia articles</div>
+  <!--<a href="https://npmjs.org/package/efrt">
+    <img src="https://img.shields.io/npm/v/efrt.svg?style=flat-square" />
+  </a>
+  <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
+    <img src="https://img.shields.io/badge/stability-stable-green.svg?style=flat-square" />
+  </a>
+  <a href="https://www.codacy.com/app/spencerkelly86/efrt">
+    <img src="https://api.codacy.com/project/badge/grade/fc03e2761c8c471c8f84141abf2704de" />
+  </a>
+  <a href="https://www.codacy.com/app/spencerkelly86/efrt">
+    <img src="https://api.codacy.com/project/badge/Coverage/fc03e2761c8c471c8f84141abf2704de" />
+  </a>-->
+</div>
+
+<!--<div align="center">
+  <code>npm install efrt</code>
+</div>-->
+
 wiki-summary is an attempt to create a configurable version of [the extract](https://en.wikipedia.org/api/rest_v1/page/summary/Toronto?redirect=true) section of the wikipedia summary api.
 
 It combines the wikiscript-parsing of [wtf_wikipedia](http://github.com/spencermountain/wtf_wikipedia) and the natural-language processing of [compromise](http://github.com/spencermountain/compromise), to trim-down an appropriate piece of text for summarizing a wikipedia article.
