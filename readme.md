@@ -6,5 +6,19 @@ you can read about the shenanigans involved in doing this [here](https://blog.wi
 
 ideally, this tool will be easily used in conjunction with things like [dumpster-dive](https://github.com/spencermountain/dumpster-dive) to produce segments of text to describe every english wikipedia article in a reasonable way.
 
+```js
+const wtf = require('wtf_wikipedia')
+const summary = require('./src')
+
+let options = {
+  max: 150,
+  min: 40,
+}
+
+wtf.fetch('toronto').then(doc => {
+  let str = summary(doc, options)
+  //"The capital of the Canadian province of Ontario"
+})
+```
 
 MIT

@@ -62,6 +62,9 @@ const extract = function(wp, options) {
   s = removeTitle(s, sentence, title)
   //remove end period
   s.setPunctuation('')
+  //titlecase first letter
+  s.words(0).toTitleCase()
+  //spit-out the text
   let text = s.trim().out('text')
   if (isGood(text, options) === true) {
     return text
