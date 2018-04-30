@@ -3,7 +3,7 @@ const extract = require('./src')
 
 let options = {
   max: 150,
-  min: 150,
+  min: 40,
 }
 
 wtf.fetch('toronto').then(doc => {

@@ -1,7 +1,8 @@
 const compromise = require('compromise')
+
 const defaults = {
-  max: 250,
-  min: 100,
+  max: 200,
+  min: 40,
 }
 
 const removeTitle = function(s, sentence, title) {
@@ -35,6 +36,14 @@ const byClause = function(s) {
   return orig
 }
 
+//check text is appropriate length
+const isGood = function(text, options) {
+  if (text && text.length > options.min && text.length < options.max) {
+    return true
+  }
+  return false
+}
+
 //
 const extract = function(wp, options) {
   options = options || {}
@@ -43,15 +52,21 @@ const extract = function(wp, options) {
   if (!sentence) {
     return ''
   }
-  // let title = wp.title() || ''
   let s = compromise(sentence.text())
+  let title = wp.title() || ''
   //born-in junk
   s = s.not('#Parentheses')
   //by comma-section
   s = byClause(s)
   //remove 'Toronto' from beginning
-  // s = removeTitle(s, sentence, title)
-  s.debug()
-  return s.trim().out('text')
+  s = removeTitle(s, sentence, title)
+  //remove end period
+  s.setPunctuation('')
+  let text = s.trim().out('text')
+  if (isGood(text, options) === true) {
+    return text
+  }
+  // s.debug()
+  return ''
 }
 module.exports = extract
