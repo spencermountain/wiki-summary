@@ -1,0 +1,31 @@
+{
+  "name": "wiki-summary",
+  "version": "0.0.1",
+  "description": "generate summaries from wikipedia articles",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/tape  ./tests/*.test.js | ./node_modules/.bin/tap-dancer --color",
+    "watch": "amble ./scratch.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spencermountain/wiki-summary.git"
+  },
+  "keywords": [
+    "wikipedia",
+    "summarization"
+  ],
+  "author": "spencermountain@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spencermountain/wiki-summary/issues"
+  },
+  "homepage": "https://github.com/spencermountain/wiki-summary#readme",
+  "dependencies": {
+    "amble": "0.0.6",
+    "compromise": "^11.6.0",
+    "tap-dancer": "0.0.2",
+    "tape": "4.9.0",
+    "wtf_wikipedia": "^3.1.1"
+  }
+}
