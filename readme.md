@@ -19,7 +19,7 @@
   <code>npm install efrt</code>
 </div>-->
 
-wiki-summary is an attempt to create a configurable version of [the 'extract'](https://en.wikipedia.org/api/rest_v1/page/summary/Toronto?redirect=true) section of the wikipedia [summary api](https://en.wikipedia.org/api/rest_v1/#!/Page_content/get_page_summary_title).
+**wiki-summary** is an attempt to create a configurable version of [the 'extract'](https://en.wikipedia.org/api/rest_v1/page/summary/Toronto?redirect=true) section of the wikipedia [summary api](https://en.wikipedia.org/api/rest_v1/#!/Page_content/get_page_summary_title).
 
 It combines:
 * the **wikiscript-parsing** of [wtf_wikipedia](http://github.com/spencermountain/wtf_wikipedia),
@@ -27,7 +27,7 @@ It combines:
 
 to trim-down an appropriate piece of summary text for a wikipedia article.
 
-it is primarily, *(at least for now,)* based on a heavily-trimmed-down first/second sentences of the 'Intro' section of the page. In the future it may do more clever things.
+it is primarily, *(at least for now,)* based on the heavily-processed first/second sentences of the page. In the future it may do more clever things.
 
 you can read about the shenanigans involved in doing this [here](https://blog.wikimedia.org/2018/04/20/why-it-took-a-long-time-to-build-that-tiny-link-preview-on-wikipedia/).
 
